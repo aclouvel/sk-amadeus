@@ -1,0 +1,16 @@
+[
+  {
+    "displayName": "Default Plugin",
+    "description": "This plugin answers to the general questions when no other plugin is enabled",
+    "moduleName": "",
+    "className": "",
+    "enable": true
+  },
+  {
+    "displayName": "BDP Inventory",
+    "description": "Fetch the Inventory from Cosmos DB",
+    "moduleName": "plugins/bdpInventoryPlugin/bdpInventory",
+    "className": "BdpInventory",
+    "enable": true
+  }
+]

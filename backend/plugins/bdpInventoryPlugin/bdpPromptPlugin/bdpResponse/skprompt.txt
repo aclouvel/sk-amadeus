@@ -1,0 +1,8 @@
+- you have as input a SQL Object
+- You have the query of the user initially asked it is the context
+- You will convert the SQL Object into a Natural
+
++++++
+{{$input}}
+{{$query}}
++++++

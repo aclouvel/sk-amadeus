@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "description": "Convert the response of the SQL response in Natural Language",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 1000,
+      "temperature": 0.9,
+      "top_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  "input_variables": [
+    {
+      "name": "input",
+      "description": "User Query in SQL Object",
+      "default": ""
+    },
+    {
+      "name": "query",
+      "description": "User query ",
+      "default": ""
+    }
+  ]
+}

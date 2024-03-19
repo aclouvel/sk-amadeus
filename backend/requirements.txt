@@ -1,0 +1,16 @@
+azure-cli
+azure-cosmos==3.0.2
+azure-identity
+Flask
+Flask-cors
+openai==0.28.1
+semantic_kernel
+tiktoken
+langchain
+azure-search-documents==11.4.0b8
+dotenv
+# msal==1.26.0
+# msal-extensions==1.0.0
+# referencing>=0.31.1
+# semantic_kernel==0.3.15.dev0
+
