@@ -1,4 +1,5 @@
-from langchain.memory.chat_message_histories import CosmosDBChatMessageHistory
+# from langchain.memory.chat_message_histories import CosmosDBChatMessageHistory
+from langchain_community.chat_message_histories import CosmosDBChatMessageHistory
 import os
 
 def setSession(session):

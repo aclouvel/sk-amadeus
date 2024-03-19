@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "description": "Answer to all general questions and greetings and messages",
+  "description": "If there is no answer in the planner you use this function. Answer to all general questions and greetings and messages",
   "execution_settings": {
     "default": {
       "max_tokens": 1000,

@@ -1,6 +1,6 @@
-- you have as input a SQL Object
-- You have the query of the user initially asked it is the context
-- You will convert the SQL Object into a Natural
+- you have as input a response from the Database in JSON Fromat
+- Based on the query {{$query}}, interpret the input {{$input}} and return a Natural Language
+- If ever you have error, just ask the user to correct the {{$query}}
 
 +++++
 {{$input}}

@@ -45,6 +45,10 @@ class bot:
         planner = ActionPlanner(kernel,SERVICE_ID)
         plan = await planner.create_plan(goal=query)
         result = await plan.invoke(kernel)
+        # if str(result) == "":
+        #     print(kernel.plugins)
+        #     responseFunction = kernel.plugins['defaultPlugin'].functions['response']
+        #     result = await kernel.invoke(responseFunction, KernelArguments(input=query))
         self.chat_history.add_assistant_message(str(result))
 
         return str(result)

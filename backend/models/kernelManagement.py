@@ -42,26 +42,26 @@ class myKernel:
         kernel = sk.Kernel()
 
 
-        if not AZURE_OPENAI_API_KEY:
-            kernel.add_service(
-                sk_oai.AzureChatCompletion(
-                    service_id="azureopenai",
-                    deployment_name=AZURE_OPENAI_CHATGPT_DEPLOYMENT,
-                    endpoint=AZURE_OPENAI_API_BASE,
-                    api_key=AZURE_OPENAI_API_KEY
-                )
+        # if AZURE_OPENAI_API_KEY:
+        kernel.add_service(
+            sk_oai.AzureChatCompletion(
+                service_id="azureopenai",
+                deployment_name=AZURE_OPENAI_CHATGPT_DEPLOYMENT,
+                endpoint=AZURE_OPENAI_API_BASE,
+                api_key=AZURE_OPENAI_API_KEY
             )
-        else:
-            credential = ManagedIdentityCredential()
-            token_provider = get_bearer_token_provider(credential, "https://cognitiveservices.azure.com/.default")
-            kernel.add_service(
-                sk_oai.AzureChatCompletion(
-                    service_id="azureopenai",
-                    deployment_name=AZURE_OPENAI_CHATGPT_DEPLOYMENT,
-                    endpoint=AZURE_OPENAI_API_BASE,
-                    ad_token_provider=token_provider
-                )
-            )
+        )
+        # else:
+        #     credential = ManagedIdentityCredential()
+        #     token_provider = get_bearer_token_provider(credential, "https://cognitiveservices.azure.com/.default")
+        #     kernel.add_service(
+        #         sk_oai.AzureChatCompletion(
+        #             service_id="azureopenai",
+        #             deployment_name=AZURE_OPENAI_CHATGPT_DEPLOYMENT,
+        #             endpoint=AZURE_OPENAI_API_BASE,
+        #             ad_token_provider=token_provider
+        #         )
+        #     )
 
         for plugin in plugins:
             for className, module in plugin.items():

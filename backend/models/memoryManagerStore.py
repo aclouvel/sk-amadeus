@@ -5,7 +5,7 @@ import os
 import ntpath
 from dotenv import load_dotenv
 import semantic_kernel as sk
-from langchain.document_loaders import DirectoryLoader
+from langchain_community.document_loaders import DirectoryLoader
 from semantic_kernel.connectors.ai.open_ai import OpenAITextEmbedding
 from semantic_kernel.connectors.memory.azure_cognitive_search import (
     AzureCognitiveSearchMemoryStore,
@@ -27,7 +27,7 @@ class memoryManagerStore:
 
         self.memory_store = AzureCognitiveSearchMemoryStore(1536,self.AZURE_SEARCH_ENDPOINT,self.AZURE_SEARCH_KEY)
 
-    def load_and_split_documents(self, data_dir) -> list[dict]:
+    def load_and_split_documents(self, data_dir) -> list:
         loader = DirectoryLoader(
             data_dir, show_progress=True
         )

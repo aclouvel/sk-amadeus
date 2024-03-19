@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 from flask_cors import CORS
 import os
 
-# from langchain_community.chat_message_histories import CosmosDBChatMessageHistory
-from langchain.memory.chat_message_histories import CosmosDBChatMessageHistory
+from langchain_community.chat_message_histories import CosmosDBChatMessageHistory
+# from langchain.memory.chat_message_histories import CosmosDBChatMessageHistory
 from routes_semantic.chatHistory import chatHistory
 
 from routes_semantic.chatGeneration import chatGeneration
