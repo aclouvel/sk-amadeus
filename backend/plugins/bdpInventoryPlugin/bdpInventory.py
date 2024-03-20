@@ -5,6 +5,8 @@ from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion
 from semantic_kernel.functions.kernel_function_decorator import kernel_function
 import semantic_kernel.connectors.ai.open_ai as sk_oai
 from semantic_kernel.functions.kernel_arguments import KernelArguments
+from semantic_kernel.contents.chat_history import ChatHistory
+
 from dotenv import load_dotenv
 if sys.version_info >= (3, 9):
     from typing import Annotated
@@ -96,7 +98,6 @@ class BdpInventory:
         bdpFunction = bdpFunctions["bdpPrompt"]
         result = await kernel.invoke(bdpFunction, sk.KernelArguments(input=input))
         result_sql = self.query_bdp_inventory(str(result))
-        print(result_sql)
         bdpResponse = bdpFunctions["bdpResponse"]
         result = await kernel.invoke(bdpResponse, sk.KernelArguments(input=result_sql,query=input))
 

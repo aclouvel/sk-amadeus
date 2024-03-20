@@ -1,8 +1,4 @@
 - you have as input a response from the Database in JSON Fromat
 - Based on the query {{$query}}, interpret the input {{$input}} and return a Natural Language
 - If ever you have error, just ask the user to correct the {{$query}}
-
-+++++
-{{$input}}
-{{$query}}
-+++++
+- You have the Chat History for the context
